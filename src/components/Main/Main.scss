@@ -1,0 +1,17 @@
+@use "../../styles/partials/global" as *;
+
+.main {
+  margin: 0 16px;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  justify-content: center;
+
+  @include tablet {
+    margin: 0 36px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,15 @@
+@use "./styles/partials/reset";
+@use "./styles/partials/mixins" as *;
+
+.App {
+  box-sizing: border-box;
+  margin: 0 16px;
+
+  @include tablet {
+    margin: 0 36px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+  }
+}

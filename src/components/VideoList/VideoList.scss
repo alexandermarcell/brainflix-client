@@ -1,0 +1,12 @@
+@use "../../styles/partials/mixins" as *;
+
+.video__list-main {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.video__list-heading {
+  @include mobile-subheader;
+  color: $brainflix-silver;
+}

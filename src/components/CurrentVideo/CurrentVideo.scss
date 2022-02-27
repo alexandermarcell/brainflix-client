@@ -1,0 +1,110 @@
+@use "../../styles/partials/mixins" as *;
+
+.current-section {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+
+  &__wrap {
+    width: 100%;
+
+    &__video {
+      background-color: $brainflix-darkblack;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto;
+      width: 100;
+      aspect-ratio: 16/9;
+    }
+
+    &__details {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      justify-content: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $brainflix-mercury;
+
+      @include tablet {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    &__video-name {
+      display: block;
+      width: 100%;
+      justify-content: flex-start;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $brainflix-mercury;
+      @include mobile-page-header();
+
+      @include tablet {
+        @include tablet-page-header;
+      }
+    }
+
+    &__container {
+      color: $brainflix-silver;
+      padding: 0.5rem 0;
+      align-items: center;
+      @include mobile-body-copy();
+
+      @include tablet {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__channel {
+        padding: 0.5rem 0;
+        color: $brainflix-black;
+        @include mobile-subheader();
+      }
+
+      &__timestamp {
+        padding: 0.5rem 0;
+        color: $brainflix-silver;
+        @include mobile-body-copy();
+      }
+
+      &__views {
+        padding: 0.5rem 0;
+        color: $brainflix-silver;
+        @include mobile-body-copy();
+      }
+
+      &__likes {
+        padding: 0.5rem 0;
+        color: $brainflix-silver;
+        @include mobile-body-copy();
+      }
+    }
+
+    &__description {
+      width: 100%;
+
+      &__text {
+        width: 100%;
+        padding: 1.5rem 0;
+        @include mobile-body-copy();
+        font-size: 16px;
+
+        @include tablet {
+          @include tablet-body-copy();
+        }
+      }
+    }
+  }
+}
+
+.icon__body {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0 1rem;
+  margin: 0 3rem;
+}

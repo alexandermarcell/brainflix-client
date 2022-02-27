@@ -1,0 +1,14 @@
+.Header {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+}
