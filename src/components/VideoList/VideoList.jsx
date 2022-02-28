@@ -16,6 +16,7 @@ function VideoList({ videoDetails, currentVideo, handleVideoChange}) {
                             poster ={video.image}
                             title={video.title}
                             channel= {video.channel}
+                            comments = {video.comments}
                             handleVideoChange={handleVideoChange}
                             />
                         )
