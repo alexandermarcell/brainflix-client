@@ -1,7 +1,6 @@
 import './Video.scss';
 
 function Video({id, title, poster, channel, handleVideoChange}){
-    console.log({channel})
     return (
         <div className="video-section">
             <div className="video-section__wrap">

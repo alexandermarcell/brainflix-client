@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+  display: block;
+  width: 0 16px;
+  box-sizing: border-box;
+}
+
+.current-video__hero__wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.current-video__player {
+  background-color: $brainflix-darkblack;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 45vw;
+  width: 100;
+}

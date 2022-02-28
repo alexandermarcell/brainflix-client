@@ -4,20 +4,26 @@ import Views from '../../Assets /Icons/views.svg';
 import Comments from '../Comments/Comments';
 import ButtonAdd from '../Button/ButtonAdd';
 import Avatar from '../Avatar/Avatar';
+// import Hero from '../Hero/Hero';
 
 function CurrentVideo({currentVideo}){
     return (
         <section className='current-section'>
             <div className="current-section__wrap">
-                <video className='current-section__wrap__video'
+                {/* <Hero/> */}
+                {/* <video 
+                    className='current-section__wrap__video'
                     poster={currentVideo.image}
                     src={currentVideo.video}
                     type="video/mp4"
                     alt='current-playing video'
-                />
+                /> */}
                  <h1 className='current-section__wrap__video-name'>
                         {currentVideo.title}
                 </h1>
+
+                {/* current video details section */}
+
                 <div className="current-section__wrap__details">
                     <div className="current-section__wrap__container">
                         <h2 className="current-section__wrap__container__channel">
@@ -49,6 +55,9 @@ function CurrentVideo({currentVideo}){
                         {currentVideo.description}
                     </p>
                 </div>
+
+                {/* Current Video Comments Section */}
+
                 <div className="current-section__wrap__comments">
                     <div className="current-section__wrap__comments-avatar">
                         <Avatar/>
