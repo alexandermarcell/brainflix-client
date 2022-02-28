@@ -10,14 +10,6 @@ function CurrentVideo({currentVideo}){
     return (
         <section className='current-section'>
             <div className="current-section__wrap">
-                {/* <Hero/> */}
-                {/* <video 
-                    className='current-section__wrap__video'
-                    poster={currentVideo.image}
-                    src={currentVideo.video}
-                    type="video/mp4"
-                    alt='current-playing video'
-                /> */}
                  <h1 className='current-section__wrap__video-name'>
                         {currentVideo.title}
                 </h1>
@@ -82,8 +74,10 @@ function CurrentVideo({currentVideo}){
                             cols="30" rows="10"
                             >   
                             </textarea>
-                            <ButtonAdd />
                         </form>
+                        <div className="current-section__wrap__comments--button">
+                            <ButtonAdd />
+                        </div>
                     </div>
                 </div>
                 <Comments currentVideo={currentVideo}/>

@@ -1,14 +1,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
+  width: 100%;
   display: block;
-  width: 0 16px;
   box-sizing: border-box;
 }
 
 .current-video__hero__wrap {
   width: 100%;
-  box-sizing: border-box;
 }
 
 .current-video__player {

@@ -5,19 +5,13 @@
   flex-direction: column;
   justify-content: center;
 
+  @include tablet {
+    box-sizing: border-box;
+    padding: 0 2rem 0 0;
+  }
+
   &__wrap {
     width: 100%;
-
-    // &__video {
-    //   background-color: $brainflix-darkblack;
-    //   width: 100%;
-    //   background-position: center;
-    //   background-size: cover;
-    //   background-repeat: no-repeat;
-    //   height: 45vw;
-    //   width: 100;
-    //   aspect-ratio: 16/9;
-    // }
 
     &__details {
       width: 100%;
@@ -102,8 +96,11 @@
     &__comments {
       display: flex;
       width: 100%;
+      box-sizing: border-box;
+      padding-right: 0.5rem;
       justify-content: center;
       padding-bottom: 1.25rem;
+      border: 1px solid red;
       border-bottom: 1px solid $brainflix-mercury;
 
       @include tablet {
@@ -111,17 +108,25 @@
       }
 
       &-avatar {
-        margin: 1.5rem 0;
-        display: flex;
+        margin: 3rem 0;
+        display: block;
         flex-direction: column;
         justify-content: flex-start;
+        border: 1px solid yellow;
       }
 
       &-container {
         width: 100%;
+        border: 1px solid green;
+
+        @include tablet {
+          display: flex;
+          align-items: center;
+        }
 
         &__form {
           width: 100%;
+          display: block;
           box-sizing: border-box;
           padding: 1.5rem;
 
@@ -142,6 +147,8 @@
             border: 1px solid $brainflix-mercury;
 
             @include tablet {
+              padding: 16px;
+              height: 40px;
               padding: 16px;
             }
 
