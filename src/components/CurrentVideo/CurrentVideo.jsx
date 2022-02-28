@@ -2,7 +2,7 @@ import './CurrentVideo.scss';
 import Likes from '../../Assets /Icons/likes.svg';
 import Views from '../../Assets /Icons/views.svg';
 import Comments from '../Comments/Comments';
-import Button from '../Button/Button';
+import ButtonAdd from '../Button/ButtonAdd';
 import Avatar from '../Avatar/Avatar';
 
 function CurrentVideo({currentVideo}){
@@ -73,7 +73,7 @@ function CurrentVideo({currentVideo}){
                             cols="30" rows="10"
                             >   
                             </textarea>
-                            <Button/>
+                            <ButtonAdd />
                         </form>
                     </div>
                 </div>
