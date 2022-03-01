@@ -6,20 +6,22 @@ import Hero from '../Hero/Hero';
 function Main({videoDetails, currentVideo, handleVideoChange}) {
     return (
         <div className="main">
-            <Hero
-            currentVideo={currentVideo}
-            />
-            <div className="main-body">
-                <CurrentVideo
+            <div className="main-wrap">
+                <Hero
                 currentVideo={currentVideo}
                 />
-                <div className="video_list-container">
-                    <VideoList
-                    videoDetails={videoDetails}
+                <div className="main-body">
+                    <CurrentVideo
                     currentVideo={currentVideo}
-                    handleVideoChange={handleVideoChange}
                     />
-                </div> 
+                    <div className="video_list-container">
+                        <VideoList
+                        videoDetails={videoDetails}
+                        currentVideo={currentVideo}
+                        handleVideoChange={handleVideoChange}
+                        />
+                    </div> 
+                </div>
             </div>
             
         </div>

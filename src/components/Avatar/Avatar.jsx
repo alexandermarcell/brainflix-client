@@ -1,4 +1,4 @@
-import Monhan from '../../Assets /Images/Mohan-muruge.jpg';
+import Monhan from '../../Assets/Images/Mohan-muruge.jpg';
 import './Avatar.scss';
 
 function Avatar(){

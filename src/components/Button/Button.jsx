@@ -1,5 +1,5 @@
 import './Button.scss';
-import upLoad from '../../Assets /Icons/upload.svg';
+import upLoad from '../../Assets/Icons/upload.svg';
 
 function Button({ text, onClick }) {
   return (

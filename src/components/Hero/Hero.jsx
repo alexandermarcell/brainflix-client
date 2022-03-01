@@ -7,10 +7,8 @@ function Hero({currentVideo}){
             <div className="current-video__hero__wrap">
                 <video
                 className='current-video__player'
-                src={currentVideo.video}
                 poster={currentVideo.image}
-                type ='mp4/video'
-                alt='current-playing__video'
+                controls
                 />
             </div>
         </section>

@@ -1,18 +1,16 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
 
+.main {
+  width: 100%;
+}
 .main-body {
-  margin: 0 16px;
   align-items: center;
   align-content: center;
   box-sizing: border-box;
   justify-content: center;
 
   @include tablet {
-    margin: 0 36px;
     display: flex;
-  }
-
-  @include desktop {
-    margin: 0 auto;
   }
 }

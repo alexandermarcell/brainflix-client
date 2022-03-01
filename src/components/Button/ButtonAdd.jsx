@@ -1,5 +1,5 @@
 import './Button.scss';
-import AddComment from '../../Assets /Icons/add_comment.svg'
+import AddComment from '../../Assets/Icons/add_comment.svg'
 
 function ButtonAdd({onClick}){
     return(

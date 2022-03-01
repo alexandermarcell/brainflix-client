@@ -1,9 +1,12 @@
 import Navbar from "../Navbar/Navbar";
+import Logo from "../Logo/Logo";
 
 function Header() {
     return (
         <div className="header">
-            <Navbar />
+            <div className="header__wrap">
+                <Navbar />
+            </div>
         </div>
     );
 }

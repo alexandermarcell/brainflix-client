@@ -1,6 +1,6 @@
 import './CurrentVideo.scss';
-import Likes from '../../Assets /Icons/likes.svg';
-import Views from '../../Assets /Icons/views.svg';
+import Likes from '../../Assets/Icons/likes.svg';
+import Views from '../../Assets/Icons/views.svg';
 import Comments from '../Comments/Comments';
 import ButtonAdd from '../Button/ButtonAdd';
 import Avatar from '../Avatar/Avatar';
@@ -57,7 +57,7 @@ function CurrentVideo({currentVideo}){
                     <div className="current-section__wrap__comments-container">
                         <form
                         className='current-section__wrap__comments-container__form'
-                        action="Get"
+                        action="/"
                         >
                             <label 
                             className='current-section__wrap__comments-container__form-label' 

@@ -1,6 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 
-.searchLine {
+.search {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -9,34 +9,27 @@
 
   @include tablet {
     margin: 0;
-    justify-content: flex-end;
   }
-}
 
-.searchForm {
-  display: flex;
-  padding: 0 auto;
-  flex-direction: row;
-  justify-content: center;
-
-  @include tablet {
-    margin: 0;
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
-}
 
-#searchInput {
-  width: 100%;
-  padding: 12px;
-  max-width: 450px;
-  min-width: 233px;
-  border-radius: 4px;
-  align-items: center;
-  box-sizing: border-box;
-  border: 1px solid $brainflix-mercury;
-
-  @include tablet {
-    min-height: 40px;
-    padding: 16px;
+  &__input {
+    width: 100%;
+    padding: 12px;
     min-width: 240px;
+    border-radius: 4px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid $brainflix-mercury;
+
+    @include tablet {
+      min-height: 40px;
+      padding: 16px;
+      min-width: 240px;
+    }
   }
 }
