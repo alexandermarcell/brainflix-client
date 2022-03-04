@@ -2,9 +2,9 @@ import './CurrentVideo.scss';
 import Likes from '../../Assets/Icons/likes.svg';
 import Views from '../../Assets/Icons/views.svg';
 import Comments from '../Comments/Comments';
-import ButtonAdd from '../Button/ButtonAdd';
+import Button from '../Button/Button';
 import Avatar from '../Avatar/Avatar';
-// import Hero from '../Hero/Hero';
+import AddComment from '../../Assets/Icons/add_comment.svg'
 
 function CurrentVideo({currentVideo}){
     return (
@@ -22,7 +22,7 @@ function CurrentVideo({currentVideo}){
                             By {currentVideo.channel}
                         </h2>
                         <p className="current-section__wrap__container__timestamp">
-                            {currentVideo.timestamp}
+                            {new Date(currentVideo.timestamp).toLocaleDateString()}
                         </p>
                     </div>
                     <div className="current-section__wrap__container">
@@ -76,7 +76,10 @@ function CurrentVideo({currentVideo}){
                             </textarea>
                         </form>
                         <div className="current-section__wrap__comments--button">
-                            <ButtonAdd />
+                            <Button
+                            image={AddComment}
+                            text='comment' 
+                            />
                         </div>
                     </div>
                 </div>

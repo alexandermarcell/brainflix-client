@@ -15,7 +15,7 @@ function Comments({currentVideo}) {
                                     {comment.name}
                                 </p>
                                 <span className="comments__container--wrap__header--date">
-                                    {comment.timestamp}
+                                    {new Date(comment.timestamp).toLocaleDateString()}
                                 </span>
                             </div>
                             <p className="comments__container--wrap__header--comment">

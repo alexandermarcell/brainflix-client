@@ -10,11 +10,13 @@ function Main({videoDetails, currentVideo, handleVideoChange}) {
                 <Hero
                 currentVideo={currentVideo}
                 />
-                <div className="main-body">
-                    <CurrentVideo
-                    currentVideo={currentVideo}
-                    />
-                    <div className="video_list-container">
+                <div className="main-wrap__body">
+                    <div className="main-wrap__body__comments">
+                        <CurrentVideo
+                        currentVideo={currentVideo}
+                        />
+                    </div>
+                    <div className="main-wrap__body__list">
                         <VideoList
                         videoDetails={videoDetails}
                         currentVideo={currentVideo}

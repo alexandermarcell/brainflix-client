@@ -1,5 +1,4 @@
 import Navbar from "../Navbar/Navbar";
-import Logo from "../Logo/Logo";
 
 function Header() {
     return (

@@ -5,7 +5,7 @@
   height: 36px;
   width: 36px;
   margin: 0 0.5rem;
-  display: flex;
+  display: block;
 
   @include tablet {
     display: none;

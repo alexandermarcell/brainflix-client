@@ -3,14 +3,34 @@
 
 .main {
   width: 100%;
-}
-.main-body {
-  align-items: center;
-  align-content: center;
   box-sizing: border-box;
-  justify-content: center;
+}
+.main-wrap {
+  width: 100%;
 
-  @include tablet {
-    display: flex;
+  &__body {
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__comments {
+      display: block;
+
+      @include tablet {
+        margin-right: 0.25rem;
+      }
+    }
+
+    &__list {
+      display: block;
+
+      @include tablet {
+        margin-left: 0.25rem;
+        justify-content: center;
+      }
+    }
   }
 }
