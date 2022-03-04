@@ -1,6 +1,5 @@
 import './App.scss';
 import React from 'react';
-import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import videoDetails from './Assets/Data/video-details.json';
 
@@ -20,7 +19,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header/>
         <Main
         videoDetails={this.state.videoDetails}
         currentVideo={this.state.currentVideo}

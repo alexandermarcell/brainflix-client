@@ -11,7 +11,7 @@ function CurrentVideo({currentVideo}){
         <section className='current-section'>
             <div className="current-section__wrap">
                  <h1 className='current-section__wrap__video-name'>
-                        {currentVideo.title}
+                    {currentVideo.title}
                 </h1>
 
                 {/* current video details section */}

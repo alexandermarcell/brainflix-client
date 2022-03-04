@@ -13,5 +13,10 @@
       display: flex;
       justify-content: center;
     }
+
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1080px;
+    }
   }
 }

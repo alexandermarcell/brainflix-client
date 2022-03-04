@@ -11,8 +11,10 @@
   &__body {
     width: 100%;
 
-    @include tablet {
+    @include desktop {
       display: flex;
+      margin: 0 auto;
+      max-width: 1080px;
       justify-content: space-between;
     }
 

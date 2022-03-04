@@ -2,11 +2,13 @@ import './Main.scss';
 import CurrentVideo from '../CurrentVideo/CurrentVideo';
 import VideoList from '../VideoList/VideoList';
 import Hero from '../Hero/Hero';
+import Header from '../Header/Header';
 
 function Main({videoDetails, currentVideo, handleVideoChange}) {
     return (
         <div className="main">
             <div className="main-wrap">
+                <Header />
                 <Hero
                 currentVideo={currentVideo}
                 />
