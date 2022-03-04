@@ -1,32 +1,17 @@
 import './App.scss';
-import React from 'react';
-import Main from './components/Main/Main';
-import videoDetails from './Assets/Data/video-details.json';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import HomePage from './pages/Page/HomePage';
+import Page from './pages/Page/Page';
 
-class App extends React.Component {
-  state = {
-    videoDetails: videoDetails,
-    currentVideo: videoDetails[0]
-  }
-
-  handleVideoChange = (id) => {
-    const newVideoId = this.state.videoDetails.findIndex(videoDetails => id === videoDetails.id)
-    this.setState({
-      currentVideo: this.state.videoDetails[newVideoId]
-    })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <Main
-        videoDetails={this.state.videoDetails}
-        currentVideo={this.state.currentVideo}
-        handleVideoChange={this.handleVideoChange}
-        />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/page" component={Page} />
+      </Switch>
+    </Router>
+  );
 }
 
 
