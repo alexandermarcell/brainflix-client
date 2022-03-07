@@ -1,10 +1,6 @@
 import './CurrentVideo.scss';
 import Likes from '../../Assets/Icons/likes.svg';
 import Views from '../../Assets/Icons/views.svg';
-import Comments from '../Comments/Comments';
-import Button from '../Button/Button';
-import Avatar from '../Avatar/Avatar';
-import AddComment from '../../Assets/Icons/add_comment.svg'
 
 function CurrentVideo({currentVideo}){
     return (
@@ -47,43 +43,6 @@ function CurrentVideo({currentVideo}){
                         {currentVideo.description}
                     </p>
                 </div>
-
-                {/* Current Video Comments Section */}
-
-                <div className="current-section__wrap__comments">
-                    <div className="current-section__wrap__comments-avatar">
-                        <Avatar/>
-                    </div>
-                    <div className="current-section__wrap__comments-container">
-                        <form
-                        className='current-section__wrap__comments-container__form'
-                        action="/"
-                        >
-                            <label 
-                            className='current-section__wrap__comments-container__form-label' 
-                            htmlFor="/"
-                            >
-                                Join The Conversation
-                            </label>
-
-                            <textarea 
-                            name="comment" 
-                            className='current-section__wrap__comments-container__form-textarea'
-                            id="form-textarea" 
-                            placeholder='Add a new comment' 
-                            cols="30" rows="10"
-                            >   
-                            </textarea>
-                        </form>
-                        <div className="current-section__wrap__comments--button">
-                            <Button
-                            image={AddComment}
-                            text='comment' 
-                            />
-                        </div>
-                    </div>
-                </div>
-                <Comments currentVideo={currentVideo}/>
             </div>
         </section>
     )

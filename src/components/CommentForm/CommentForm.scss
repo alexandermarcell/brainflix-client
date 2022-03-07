@@ -1,0 +1,81 @@
+@use "../../styles/partials/mixins" as *;
+
+.comment {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid $brainflix-mercury;
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  &__avatar {
+    margin: 3rem 0;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.comment-form {
+  display: block;
+  width: 100%;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1.5rem;
+
+    @include tablet {
+      width: 100%;
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    border-radius: 4px;
+    padding-bottom: 0.5rem;
+    color: $brainflix-silver;
+    @include mobile-body-copy();
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 12px;
+    min-width: 240px;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid $brainflix-mercury;
+
+    @include tablet {
+      padding: 16px;
+      max-height: 40px;
+      padding: 16px;
+    }
+
+    &:active {
+      border: 2px solid $brainflix-blue;
+    }
+
+    &:error {
+      border: 1px solid #d22d2d;
+    }
+  }
+
+  &__button {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+}

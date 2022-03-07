@@ -1,0 +1,196 @@
+@use "../../styles/partials/mixins" as *;
+
+.main {
+  width: 100%;
+  display: flex;
+  margin: 0 16px;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    margin: 0 36px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  &__wrap {
+    width: 100;
+    box-sizing: border-box;
+  }
+}
+
+.upload-pageHeader {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid $brainflix-mercury;
+  border-bottom: 1px solid $brainflix-mercury;
+  @include mobile-page-header();
+  @include tablet {
+    @include tablet-page-header();
+  }
+}
+
+.upload-page-hero {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $brainflix-darkblack;
+
+  @include desktop {
+    max-width: 500px;
+  }
+}
+
+.upload-pageform {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.upload-form {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+
+  @include desktop {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 2rem;
+  }
+
+  &__head {
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+
+  &__label {
+    width: 100%;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    color: $brainflix-mercury;
+    @include mobile-body-copy();
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    min-height: 36px;
+    min-width: 240px;
+    margin-top: 0.2rem;
+    border: 1px solid $brainflix-mercury;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    @include tablet {
+      padding: 16px;
+      min-height: 40px;
+      padding: 16px;
+    }
+
+    &:active {
+      border: 1px solid $brainflix-blue;
+    }
+
+    &:error {
+      border: 1px solid #d22d2d;
+    }
+  }
+
+  &__body {
+    display: 100%;
+    flex-direction: column;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    min-width: 240px;
+    min-height: 36px;
+    margin-top: 0.2rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid $brainflix-mercury;
+
+    @include tablet {
+      padding: 16px;
+      min-height: 40px;
+      min-height: 40px;
+      padding: 16px;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+
+    &:active {
+      border: 2px solid $brainflix-blue;
+    }
+
+    &:error {
+      border: 1px solid #d22d2d;
+    }
+  }
+  &__button {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.cancel__wrap--mobile {
+  width: 100%;
+  padding: 1.2rem;
+  text-align: center;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.cancel__wrap--tablet {
+  display: none;
+
+  @include tablet {
+    display: block;
+    padding: 1.2rem;
+  }
+}
+
+.cancel__button {
+  width: 100%;
+  text-decoration: none;
+  color: $brainflix-blue;
+
+  @include tablet {
+    padding-right: 2rem;
+  }
+}

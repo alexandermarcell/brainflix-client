@@ -2,12 +2,12 @@ import './Comments.scss';
 import React from 'react';
 import Avatar from '../Avatar/Avatar';
 
-function Comments({currentVideo}) {
+function Comments({comments}) {
     return(
         <section className="comment-section__box">    
-            {currentVideo.comments.map((comment) => {
+            {comments.map((comment) => {
                 return (
-                   <div className="comments__container">
+                   <article key={comment.id} className="comments__container">
                        <Avatar/>
                         <div className="comments__container--wrap">
                             <div className="comments__container--wrap__header">
@@ -22,7 +22,7 @@ function Comments({currentVideo}) {
                                 {comment.comment}
                             </p>
                         </div>
-                   </div>
+                   </article>
                 )
             })}
         </section>

@@ -3,6 +3,7 @@ import './Button.scss';
 function Button({ image, text, onClick }) {
   return (
     <button 
+    type='submit'
     onClick={onClick}
     className='btn'
     >

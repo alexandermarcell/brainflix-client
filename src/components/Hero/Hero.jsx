@@ -1,13 +1,13 @@
 import './Hero.scss';
 import React from 'react';
 
-function Hero({currentVideo}){
+function Hero(props){
     return(
         <section className="hero">
             <div className="current-video__hero__wrap">
                 <video
                 className='current-video__player'
-                poster={currentVideo.image}
+                poster={props.currentVideo.image}
                 controls
                 />
             </div>

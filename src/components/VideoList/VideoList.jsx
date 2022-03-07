@@ -2,7 +2,7 @@ import './VideoList.scss';
 import Video from '../Video/Video';
 
 
-function VideoList({ videoDetails, currentVideo, handleVideoChange}) {
+function VideoList({videoDetails, currentVideo}) {
     return (
         <section className='video__list-main'>
             <div className="video__list-main__wrap">
@@ -14,12 +14,10 @@ function VideoList({ videoDetails, currentVideo, handleVideoChange}) {
                             return (
                                 <Video
                                 key={video.id}
-                                id = {video.id}
+                                id={video.id}
                                 poster ={video.image}
                                 title={video.title}
                                 channel= {video.channel}
-                                comments = {video.comments}
-                                handleVideoChange={handleVideoChange}
                                 />
                             )
                         })

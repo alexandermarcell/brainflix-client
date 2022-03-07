@@ -3,8 +3,10 @@ import CurrentVideo from '../CurrentVideo/CurrentVideo';
 import VideoList from '../VideoList/VideoList';
 import Hero from '../Hero/Hero';
 import Header from '../Header/Header';
+import CommentForm from '../CommentForm/CommentForm';
+import Comments from '../Comments/Comments';
 
-function Main({videoDetails, currentVideo, handleVideoChange}) {
+function Main({ videoDetails, currentVideo, comments }) {
     return (
         <div className="main">
             <div className="main-wrap">
@@ -17,12 +19,15 @@ function Main({videoDetails, currentVideo, handleVideoChange}) {
                         <CurrentVideo
                         currentVideo={currentVideo}
                         />
+                        <CommentForm />
+                        <Comments
+                        comments={comments}
+                        />
                     </div>
                     <div className="main-wrap__body__list">
                         <VideoList
                         videoDetails={videoDetails}
                         currentVideo={currentVideo}
-                        handleVideoChange={handleVideoChange}
                         />
                     </div> 
                 </div>

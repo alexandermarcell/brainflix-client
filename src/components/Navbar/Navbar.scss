@@ -13,10 +13,19 @@
       display: flex;
       justify-content: center;
     }
+  }
 
-    @include desktop {
-      margin: 0 auto;
-      max-width: 1080px;
-    }
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+
+  &__logo {
+    list-style-type: none;
+    text-decoration: none;
+  }
+  &__button {
+    list-style-type: none;
+    text-decoration: none;
   }
 }
