@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 import Search from "../Search/Search"
 import Button from "../Button/Button";
 import { Link } from 'react-router-dom';
-import AvatarTablet from "../Avatar/AvatarTablet";
+import Avatar from "../Avatar/Avatar";
 import upLoad from '../../Assets/Icons/upload.svg';
 
 function Navbar() {
@@ -20,7 +20,7 @@ function Navbar() {
                     image={upLoad}
                     />
                 </Link>
-                <AvatarTablet />
+                <Avatar />
             </div>
         </div>
     );

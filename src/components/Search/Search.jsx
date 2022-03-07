@@ -1,5 +1,5 @@
 import './Search.scss';
-import AvatarHeader from '../Avatar/AvatarHeader';
+import Avatar from '../Avatar/Avatar';
 
 
 const Search = () => {
@@ -12,7 +12,7 @@ const Search = () => {
                     placeholder="Search"
                 />
             </form>
-            <AvatarHeader />
+            <Avatar />
         </div>
         
     )

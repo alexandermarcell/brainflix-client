@@ -2,15 +2,15 @@ import './Main.scss';
 import CurrentVideo from '../CurrentVideo/CurrentVideo';
 import VideoList from '../VideoList/VideoList';
 import Hero from '../Hero/Hero';
-import Header from '../Header/Header';
 import CommentForm from '../CommentForm/CommentForm';
 import Comments from '../Comments/Comments';
+import Navbar from '../Navbar/Navbar';
 
 function Main({ videoDetails, currentVideo, comments }) {
     return (
         <div className="main">
             <div className="main-wrap">
-                <Header />
+                <Navbar />
                 <Hero
                 currentVideo={currentVideo}
                 />
