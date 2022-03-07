@@ -1,38 +1,66 @@
 @use "../../styles/partials/mixins" as *;
 
-.comment-section__box {
+.comments {
   display: block;
   width: 100%;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-}
 
-.comments__container {
-  display: flex;
-  margin: 1rem 0;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid $brainflix-mercury;
+  &__container {
+    display: flex;
+    margin: 1rem 0;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid $brainflix-mercury;
+  }
+  &__avatar {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    margin: 0 0.5rem;
+    display: flex;
+    background-color: $brainflix-silver;
 
-  &--wrap {
+    @include tablet {
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  &__box {
     width: 100%;
     margin-left: 0.75rem;
+  }
 
-    &__header {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-      &--name {
-        display: block;
-        width: 100%;
-        margin: 0.5rem 0;
-      }
+  &__name {
+    display: block;
+    margin: 0.5rem 0;
+    @include mobile-body-copy();
 
-      &--date {
-        display: block;
-      }
+    @include tablet {
+      @include tablet-body-copy();
+    }
+  }
+
+  &__date {
+    display: block;
+  }
+
+  &__comment {
+    width: 100%;
+    @include mobile-body-copy();
+
+    @include tablet {
+      @include tablet-body-copy();
     }
   }
 }

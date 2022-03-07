@@ -1,5 +1,5 @@
 import './Search.scss';
-import Avatar from '../Avatar/Avatar';
+import Mohan from '../../Assets/Images/Mohan-muruge.jpg';
 
 
 const Search = () => {
@@ -12,7 +12,11 @@ const Search = () => {
                     placeholder="Search"
                 />
             </form>
-            <Avatar />
+            <img 
+            src={Mohan}
+            className='search-avatar'
+            alt='Search line avatar' 
+            />
         </div>
         
     )

@@ -1,24 +1,23 @@
 import './Comments.scss';
 import React from 'react';
-import Avatar from '../Avatar/Avatar';
 
 function Comments({comments}) {
     return(
-        <section className="comment-section__box">    
+        <section className="comments">    
             {comments.map((comment) => {
                 return (
                    <article key={comment.id} className="comments__container">
-                       <Avatar/>
-                        <div className="comments__container--wrap">
-                            <div className="comments__container--wrap__header">
-                                <p className="comments__container--wrap__header--name">
+                       <div className="comments__avatar"></div>
+                        <div className="comments__box">
+                            <div className="comments__header">
+                                <h3 className="comments__name">
                                     {comment.name}
-                                </p>
-                                <span className="comments__container--wrap__header--date">
+                                </h3>
+                                <p className="comments__date">
                                     {new Date(comment.timestamp).toLocaleDateString()}
-                                </span>
+                                </p>
                             </div>
-                            <p className="comments__container--wrap__header--comment">
+                            <p className="comments__comment">
                                 {comment.comment}
                             </p>
                         </div>

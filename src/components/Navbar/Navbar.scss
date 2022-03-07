@@ -29,3 +29,21 @@
     text-decoration: none;
   }
 }
+
+.navbar__avatar {
+  display: none;
+
+  @include tablet {
+    display: block;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    margin: 0 0.5rem;
+    display: flex;
+
+    @include tablet {
+      height: 48px;
+      width: 48px;
+    }
+  }
+}

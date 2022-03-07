@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import cycle from '../../Assets/Images/Upload-video-preview.jpg';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
-import upLoad from '../../Assets/Icons/upload.svg';
+import publish from '../../Assets/Icons/publish.svg';
 
 function Page(){
     return(
@@ -49,7 +49,7 @@ function Page(){
                         </p>
                         <Link to="/" style={{textDecoration: 'none'}}>
                             <Button
-                                image={upLoad}
+                                image={publish}
                                 text='publish'
                                 onClick={() => {
                                     alert("Your video has been uploaded!");

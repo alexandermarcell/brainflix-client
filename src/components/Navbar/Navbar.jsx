@@ -3,8 +3,8 @@ import Logo from "../Logo/Logo";
 import Search from "../Search/Search"
 import Button from "../Button/Button";
 import { Link } from 'react-router-dom';
-import Avatar from "../Avatar/Avatar";
 import upLoad from '../../Assets/Icons/upload.svg';
+import Mohan from '../../Assets/Images/Mohan-muruge.jpg';
 
 function Navbar() {
     return (
@@ -20,7 +20,11 @@ function Navbar() {
                     image={upLoad}
                     />
                 </Link>
-                <Avatar />
+                <img 
+                src={Mohan}
+                className='navbar__avatar'
+                alt='Search line avatar' 
+                />
             </div>
         </div>
     );
