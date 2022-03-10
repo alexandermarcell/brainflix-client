@@ -1,10 +1,10 @@
 import './Main.scss';
-import CurrentVideo from '../CurrentVideo/CurrentVideo';
-import VideoList from '../VideoList/VideoList';
 import Hero from '../Hero/Hero';
-import CommentForm from '../CommentForm/CommentForm';
-import Comments from '../Comments/Comments';
 import Navbar from '../Navbar/Navbar';
+import Comments from '../Comments/Comments';
+import VideoList from '../VideoList/VideoList';
+import CommentForm from '../CommentForm/CommentForm';
+import CurrentVideo from '../CurrentVideo/CurrentVideo';
 
 function Main({ videoDetails, currentVideo, comments }) {
     return (
@@ -14,17 +14,21 @@ function Main({ videoDetails, currentVideo, comments }) {
                 <Hero
                 currentVideo={currentVideo}
                 />
-                <div className="main-wrap__body">
-                    <div className="main-wrap__body__comments">
+                <div className="main__body">
+                    <div className="main__body__comments">
+
                         <CurrentVideo
                         currentVideo={currentVideo}
                         />
+
                         <CommentForm />
+
                         <Comments
                         comments={comments}
                         />
+
                     </div>
-                    <div className="main-wrap__body__list">
+                    <div className="main__body__list">
                         <VideoList
                         videoDetails={videoDetails}
                         currentVideo={currentVideo}

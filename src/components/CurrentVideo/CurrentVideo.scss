@@ -1,12 +1,19 @@
 @use "../../styles/partials/mixins" as *;
 
 .current-video {
-  display: block;
+  display: flex;
+  margin: 0 16px;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
 
   @include tablet {
-    box-sizing: border-box;
+    margin: 0 36px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1440px;
   }
 
   &__wrap {

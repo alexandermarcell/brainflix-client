@@ -1,16 +1,11 @@
 @use "../../styles/partials/mixins" as *;
 
-.comment {
-  display: flex;
+.commentForm {
   width: 100%;
-  box-sizing: border-box;
+  display: flex;
   justify-content: center;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid $brainflix-mercury;
-
-  @include tablet {
-    justify-content: center;
-  }
 
   &__avatar {
     margin: 3rem 0;

@@ -1,37 +1,49 @@
 @use "../../styles/partials/mixins" as *;
 
 .comments {
-  display: block;
   width: 100%;
+  display: flex;
+  margin: 0 16px;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 2rem 0;
+
+  @include tablet {
+    margin: 0 36px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 
   &__container {
     display: flex;
-    margin: 1rem 0;
-    padding: 1.25rem 0;
+    padding: 1rem 0;
+    flex-direction: row;
+    box-sizing: border-box;
     border-bottom: 1px solid $brainflix-mercury;
   }
   &__avatar {
-    width: 100%;
-    display: block;
-    border-radius: 50%;
-    height: 36px;
     width: 36px;
-    margin: 0 0.5rem;
-    display: flex;
+    height: 36px;
+    display: block;
+    margin-right: 0.25rem;
+    border-radius: 50%;
     background-color: $brainflix-silver;
 
     @include tablet {
-      height: 48px;
       width: 48px;
+      height: 48px;
     }
   }
 
   &__box {
     width: 100%;
-    margin-left: 0.75rem;
+    display: flex;
+    margin-left: 0.25rem;
+    flex-direction: column;
+    box-sizing: border-box;
   }
 
   &__header {
@@ -42,7 +54,6 @@
   }
 
   &__name {
-    display: block;
     margin: 0.5rem 0;
     @include mobile-body-copy();
 
@@ -52,11 +63,16 @@
   }
 
   &__date {
-    display: block;
+    @include mobile-body-copy();
+
+    @include tablet {
+      @include tablet-body-copy();
+    }
   }
 
   &__comment {
     width: 100%;
+
     @include mobile-body-copy();
 
     @include tablet {

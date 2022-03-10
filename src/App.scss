@@ -1,17 +1,1 @@
 @use "./styles/partials/reset";
-@use "./styles/partials/mixins" as *;
-
-.App {
-  box-sizing: border-box;
-  margin: 0 16px;
-
-  @include tablet {
-    margin: 0 36px;
-  }
-
-  @include desktop {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1440px;
-  }
-}

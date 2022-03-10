@@ -7,13 +7,14 @@
   display: flex;
   margin: 1rem 0;
   overflow: hidden;
+  position: relative;
   border-radius: 4px;
   align-items: center;
+  list-style-type: none;
+  text-decoration: none;
   box-sizing: border-box;
   justify-content: center;
   text-transform: uppercase;
-  list-style-type: none;
-  text-decoration: none;
   background-color: $brainflix-blue;
   color: $brainflix-white;
 
@@ -22,6 +23,11 @@
   @include tablet {
     width: 150px;
     padding: 0 32px;
+  }
+
+  &-image {
+    position: absolute;
+    left: 1rem;
   }
 }
 

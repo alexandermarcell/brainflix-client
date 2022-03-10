@@ -5,8 +5,8 @@ import AddComment from '../../Assets/Icons/add_comment.svg'
 
 function CommentForm(){
     return(
-        <div className="comment">
-            <div className="comment__avatar">
+        <div className="commentForm">
+            <div className="commentForm__avatar">
                 <Avatar/>
             </div>
             <div className="comment-form">

@@ -4,9 +4,9 @@ import React from 'react';
 function Hero(props){
     return(
         <section className="hero">
-            <div className="current-video__hero__wrap">
+            <div className="hero__wrap">
                 <video
-                className='current-video__player'
+                className='hero__player'
                 poster={props.currentVideo.image}
                 controls
                 />

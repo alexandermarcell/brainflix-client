@@ -8,6 +8,7 @@ function Button({ image, text, onClick }) {
     className='btn'
     >
       <img
+      className='btn-image'
       src={image}
       alt="btn"
       />

@@ -3,36 +3,35 @@
 
 .main {
   width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
-.main-wrap {
+
+.main__body {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 
-  &__body {
-    width: 100%;
+  @include desktop {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1080px;
+    justify-content: space-between;
+  }
 
-    @include desktop {
-      display: flex;
-      margin: 0 auto;
-      max-width: 1080px;
-      justify-content: space-between;
-    }
+  &__comments {
+    display: block;
+  }
 
-    &__comments {
-      display: block;
+  &__list {
+    display: flex;
+    margin: 1rem 0.5rem;
+    flex-direction: column;
 
-      @include tablet {
-        margin-right: 0.25rem;
-      }
-    }
-
-    &__list {
-      display: block;
-
-      @include tablet {
-        margin-left: 0.25rem;
-        justify-content: center;
-      }
+    @include tablet {
+      margin-left: 0.25rem;
+      justify-content: center;
     }
   }
 }
