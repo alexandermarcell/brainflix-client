@@ -11,10 +11,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 
   @include desktop {
     display: flex;
+    flex-direction: row;
     margin: 0 auto;
     max-width: 1080px;
     justify-content: space-between;

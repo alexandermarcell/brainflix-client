@@ -3,16 +3,14 @@
 .hero {
   width: 100%;
   display: block;
-  box-sizing: border-box;
 }
 
 .hero__wrap {
   width: 100%;
-  box-sizing: border-box;
 }
 
 .hero__player {
-  width: 100%;
+  width: 100vw;
   height: 45vw;
   background-size: cover;
   background-position: center;
