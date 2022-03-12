@@ -52,13 +52,13 @@ class HomePage extends React.Component{
     render() {
       if (this.state.currentVideo === null) return <h2>Video Loading ...</h2>
         return(
-            <div>
+            <>
                 <Main
                 videoDetails={this.state.videoDetails}
                 comments={this.state.comments}
                 currentVideo={this.state.currentVideo}
                 />
-            </div>
+            </>
         )
     }
 }
