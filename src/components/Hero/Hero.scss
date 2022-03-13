@@ -2,34 +2,28 @@
 
 .hero {
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-}
 
-.hero__wrap {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-}
-
-.hero__player {
-  width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @include tablet {
-    height: 60vh;
+  &__wrap {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     background-color: $brainflix-darkblack;
+  }
+
+  &__player {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+
+    @include tablet {
+      max-width: 720px;
+    }
+
+    @include desktop {
+      max-width: 1080px;
+    }
   }
 }

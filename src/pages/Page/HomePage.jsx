@@ -12,24 +12,24 @@ class HomePage extends React.Component{
       }
 
     //upload function
-    formFunction(e , id) {
-      // form function???
-      // let newComment = { 
-      //   name: 'Mohan Muruge',
-      //   comment: e.target.commentForm.value,
-      // };
+    // formFunction(e , id) {
+    //   form function???
+    //   let newComment = { 
+    //     name: 'Mohan Muruge',
+    //     comment: e.target.commentForm.value,
+    //   };
       
-      axios
-        .post(`URL + ${id}`)
-        .then(() => {
-          this.getVideoId(this.state.currentVideo.id)
-        })
-        .catch((error) => {
-          console.log("There is an error", error);
-        });
+    //   axios
+    //     .post(`URL + ${id}`)
+    //     .then(() => {
+    //       this.getVideoId(this.state.currentVideo.id)
+    //     })
+    //     .catch((error) => {
+    //       console.log("There is an error", error);
+    //     });
       
-      e.target.reset();
-    }
+    //   e.target.reset();
+    // }
 
     componentDidMount() {
       axios

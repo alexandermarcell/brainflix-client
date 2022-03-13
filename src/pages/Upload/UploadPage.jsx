@@ -6,30 +6,28 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
 import publish from '../../Assets/Icons/publish.svg';
 import cycle from '../../Assets/Images/Upload-video-preview.jpg';
-import VideoList from "../../components/VideoList/VideoList";
 
 const Url = "http://localhost:5500/api/v1/videos/";
 
-function Page(){
+function Page(props){
     const handleSubmit = (e) => {
         e.preventDefault();
+        
+        if (!e.target.title.value || !e.target.description.value){
+            return;
+        }
 
         axios
             .post(Url, {
                 title: e.target.title.value,
-                channel: 'Tom Brady',
-                image: '',
                 description: e.target.description.value,
-            })
-            .then((response) => {
-                console.log("Submitted!");
             })
             .catch((error) =>{
                 console.log("There has been an error: ", error);
             })
 
         alert( "Your video has been uploaded!")
-        VideoList.push('/');
+        props.history.push('/');
     }
     return(
         <main className='upload'>
@@ -58,7 +56,7 @@ function Page(){
                                 <input 
                                 className='uploadForm__input' 
                                 type="text" 
-                                name='input' 
+                                name='title' 
                                 placeholder='Add a title to your video'
                                 required 
                                 />
@@ -69,7 +67,7 @@ function Page(){
                                 </label>
                                 <textarea 
                                 className='uploadForm__textarea' 
-                                name='text-description' 
+                                name='description' 
                                 type="text" 
                                 placeholder='Add a description to your video' 
                                 />
@@ -80,13 +78,10 @@ function Page(){
                                         CANCEL
                                     </Link>
                                 </p>
-                                <Link to="/" className="button--link">
-                                    <Button
-                                        image={publish}
-                                        type='submit'
-                                        text='publish'
-                                    />
-                                </Link>
+                                <Button
+                                    image={publish}
+                                    text='publish'
+                                />
                                 <p className="cancel__wrap--mobile">
                                     <Link className="cancel__button" to="/">CANCEL</Link>
                                 </p>

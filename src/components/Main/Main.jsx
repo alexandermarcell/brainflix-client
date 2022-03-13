@@ -9,7 +9,9 @@ import CurrentVideo from '../CurrentVideo/CurrentVideo';
 function Main({ videoDetails, currentVideo, comments }) {
     return (
         <div className="main__section">
-            <Navbar />
+            <div className="main__nav">
+                <Navbar />
+            </div>
             <Hero
             currentVideo={currentVideo}
             />
