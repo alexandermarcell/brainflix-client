@@ -11,6 +11,26 @@ class HomePage extends React.Component{
         comments: []
       }
 
+    //upload function
+    formFunction(e , id) {
+      // form function???
+      // let newComment = { 
+      //   name: 'Mohan Muruge',
+      //   comment: e.target.commentForm.value,
+      // };
+      
+      axios
+        .post(`URL + ${id}`)
+        .then(() => {
+          this.getVideoId(this.state.currentVideo.id)
+        })
+        .catch((error) => {
+          console.log("There is an error", error);
+        });
+      
+      e.target.reset();
+    }
+
     componentDidMount() {
       axios
         .get( Url )

@@ -1,70 +1,90 @@
 @use "../../styles/partials/mixins" as *;
 
-.main {
+.upload {
   width: 100%;
-  display: flex;
-  margin: 0 16px;
-  align-items: center;
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: center;
-
-  @include tablet {
-    margin: 0 36px;
-  }
-
-  @include desktop {
-    margin: 0 auto;
-    max-width: 1440px;
-  }
 
   &__wrap {
-    width: 100;
-    box-sizing: border-box;
-  }
-}
-
-.upload-pageHeader {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 1rem 0;
-  border-top: 1px solid $brainflix-mercury;
-  border-bottom: 1px solid $brainflix-mercury;
-  @include mobile-page-header();
-  @include tablet {
-    @include tablet-page-header();
-  }
-}
-
-.upload-page-hero {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  border-radius: 4px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: $brainflix-darkblack;
-
-  @include desktop {
-    max-width: 500px;
-  }
-}
-
-.upload-pageform {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
-
-  @include desktop {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    margin: 16px;
+
+    @include tablet {
+      margin: 0 36px;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1080px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    @include tablet {
+      padding-bottom: 3rem;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .uploadHeaderImage {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__pageHeader {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0 0 1rem;
+    border-top: 1px solid $brainflix-mercury;
+    border-bottom: 1px solid $brainflix-mercury;
+    @include mobile-page-header();
+
+    @include tablet {
+      @include tablet-page-header();
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__thumbnail {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $brainflix-darkblack;
+
+    @include desktop {
+      max-width: 600px;
+    }
   }
 }
 
-.upload-form {
+.uploadForm {
   width: 100%;
   margin: 1rem 0;
   padding: 1rem 0;
@@ -105,7 +125,6 @@
     @include tablet {
       padding: 16px;
       min-height: 40px;
-      padding: 16px;
     }
 
     &:active {
@@ -118,13 +137,14 @@
   }
 
   &__body {
-    display: 100%;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
   }
 
   &__textarea {
     width: 100%;
-    height: 100%;
+    resize: none;
     padding: 12px;
     min-width: 240px;
     min-height: 36px;
@@ -136,8 +156,6 @@
     @include tablet {
       padding: 16px;
       min-height: 40px;
-      min-height: 40px;
-      padding: 16px;
     }
 
     @include desktop {
@@ -152,6 +170,7 @@
       border: 1px solid #d22d2d;
     }
   }
+
   &__button {
     width: 100%;
     align-items: center;
@@ -168,7 +187,6 @@
 
 .cancel__wrap--mobile {
   width: 100%;
-  padding: 1.2rem;
   text-align: center;
 
   @include tablet {
@@ -181,7 +199,7 @@
 
   @include tablet {
     display: block;
-    padding: 1.2rem;
+    margin: 0 1.5rem;
   }
 }
 
@@ -193,4 +211,9 @@
   @include tablet {
     padding-right: 2rem;
   }
+}
+
+.button--link {
+  list-style-type: none;
+  text-decoration: none;
 }

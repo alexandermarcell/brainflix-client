@@ -14,7 +14,7 @@ const Search = () => {
             </form>
             <img 
             src={Mohan}
-            className='search-avatar'
+            className='searchAvatar'
             alt='Search line avatar' 
             />
         </div>
