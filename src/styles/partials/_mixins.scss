@@ -31,29 +31,29 @@
 @mixin tablet-section-header {
   font-size: 12px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @mixin mobile-section-header {
   font-size: 12px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin tablet-subheader {
   font-size: 14px;
   line-height: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @mixin mobile-subheader {
   font-size: 13px;
   line-height: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin tablet-body-copy {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: 400;
 }
 @mixin mobile-body-copy {
   font-size: 13px;

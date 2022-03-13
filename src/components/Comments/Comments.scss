@@ -5,6 +5,7 @@
   display: flex;
   margin: 0 16px;
   align-items: center;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
 
@@ -19,7 +20,7 @@
 
   &__container {
     display: flex;
-    padding: 1rem 0;
+    padding: 0.5rem;
     flex-direction: row;
     box-sizing: border-box;
     border-bottom: 1px solid $brainflix-mercury;

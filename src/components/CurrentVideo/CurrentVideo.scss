@@ -1,20 +1,10 @@
 @use "../../styles/partials/mixins" as *;
 
-.current-video {
+.currentVideo {
   display: flex;
-  margin: 0 16px;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
-
-  @include tablet {
-    margin: 0 36px;
-  }
-
-  @include desktop {
-    margin: 0 auto;
-    max-width: 1440px;
-  }
 
   &__wrap {
     width: 100%;
@@ -33,83 +23,82 @@
     }
   }
 }
-.video-wrap {
+.details {
   width: 100%;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
   border-bottom: 1px solid $brainflix-mercury;
+}
+.detail__header {
+  width: 100%;
+  display: block;
+  padding: 0.5rem 0;
+  align-items: center;
+  @include mobile-body-copy();
 
-  &__header {
-    width: 100%;
-    display: block;
-    padding: 0.5rem 0;
-    align-items: center;
-    @include mobile-body-copy();
-
-    @include tablet {
-      display: flex;
-      @include tablet-body-copy();
-    }
-  }
-
-  &__channel {
-    padding: 0.5rem 0;
-    color: $brainflix-black;
-    @include mobile-subheader();
-
-    @include tablet {
-      margin-right: 3rem;
-    }
-  }
-
-  &__timestamp {
-    padding: 0.5rem 0;
-    color: $brainflix-silver;
-    @include mobile-body-copy();
-  }
-
-  &__container {
-    width: 100%;
+  @include tablet {
     display: flex;
-    flex-direction: column;
+    @include tablet-body-copy();
+  }
+}
+
+.detail__channel {
+  padding: 0.5rem 0;
+  color: $brainflix-black;
+  @include mobile-subheader();
+
+  @include tablet {
+    margin-right: 3rem;
+  }
+}
+
+.detail__timestamp {
+  padding: 0.5rem 0;
+  color: $brainflix-silver;
+  @include mobile-body-copy();
+}
+
+.detail__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-    }
+    justify-content: flex-end;
   }
+}
 
-  &__views {
-    padding: 0.5rem 0;
-    color: $brainflix-silver;
-    @include mobile-body-copy();
+.detail__views {
+  padding: 0.5rem 0;
+  color: $brainflix-silver;
+  @include mobile-body-copy();
 
-    @include tablet {
-      margin-right: 2rem;
-    }
+  @include tablet {
+    margin-right: 2rem;
   }
+}
 
-  &__likes {
-    padding: 0.5rem 0;
-    margin-right: 1rem;
-    color: $brainflix-silver;
-    @include mobile-body-copy();
-  }
+.detail__likes {
+  padding: 0.5rem 0;
+  margin-right: 1rem;
+  color: $brainflix-silver;
+  @include mobile-body-copy();
+}
 
-  &__description {
-    width: 100%;
-    padding: 1.5rem 0;
-    @include mobile-body-copy();
-    font-size: 16px;
+.detail__description {
+  width: 100%;
+  font-size: 16px;
+  padding: 1.5rem 0;
+  @include mobile-body-copy();
 
-    @include tablet {
-      @include tablet-body-copy();
-    }
+  @include tablet {
+    @include tablet-body-copy();
   }
 }
 

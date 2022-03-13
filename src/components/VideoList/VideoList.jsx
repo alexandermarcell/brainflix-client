@@ -4,10 +4,9 @@ import Video from '../Video/Video';
 
 function VideoList({videoDetails, currentVideo}) {
     return (
-        <section className='video__list-main'>
-            <div className="video__list-main__wrap">
-                <h2 className="video__list-main__wrap__heading">Next Video</h2>
-                <ul className="video__list-main__wrap__list">
+        <section className='list'>
+                <ul className="list__wrap">
+                    <h2 className="list__heading">Next Video</h2>
                     {videoDetails
                         .filter(video => video.id !== currentVideo.id)
                         .map(video => {
@@ -23,7 +22,7 @@ function VideoList({videoDetails, currentVideo}) {
                         })
                     }
                 </ul>
-            </div>
+            
         </section>
     )
 }

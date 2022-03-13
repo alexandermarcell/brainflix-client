@@ -1,26 +1,23 @@
 @use "../../styles/partials/mixins" as *;
 
-.video__list-main {
+.list {
   width: 100%;
   align-items: center;
   justify-content: center;
 
-  @include tablet {
+  @include desktop {
     margin-top: 1rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid $brainflix-mercury;
+  }
+
+  &__heading {
+    @include mobile-subheader;
+    color: $brainflix-silver;
   }
 
   &__wrap {
     width: 100%;
-    box-sizing: border-box;
-
-    @include tablet {
-      padding-left: 0.5rem;
-      border-left: 1px solid $brainflix-mercury;
-    }
-
-    &__heading {
-      @include mobile-subheader;
-      color: $brainflix-silver;
-    }
+    padding: 0 0 0 0.5rem;
   }
 }

@@ -2,8 +2,7 @@ import React from "react";
 import axios from 'axios';
 import Main from '../../components/Main/Main';
 
-const Url = "https://project-2-api.herokuapp.com/videos/";
-const apiKey="?api_key=d20466a8-1fbd-4c61-b79d-eb89c69fcc10";
+const Url = "http://localhost:5500/api/v1/videos/";
 
 class HomePage extends React.Component{
     state = {
@@ -14,7 +13,7 @@ class HomePage extends React.Component{
 
     componentDidMount() {
       axios
-        .get(Url+apiKey)
+        .get( Url )
         .then(response =>{ 
           console.log(response.data);
           this.setState({ videoDetails: response.data })
@@ -28,7 +27,7 @@ class HomePage extends React.Component{
 
     getVideoById = (id) => {
       axios
-        .get(Url + id+ apiKey )
+        .get( Url + id )
         .then((response)=>{
           console.log(response.data)
           this.setState({
@@ -45,6 +44,7 @@ class HomePage extends React.Component{
       const videoId = this.props.match.params.id || this.state.videoDetails[0].id
       if (prevState.currentVideo && prevState.currentVideo.id !== videoId){
         this.getVideoById(videoId)
+        window.scrollTo(0, 0)
       }
     }
     

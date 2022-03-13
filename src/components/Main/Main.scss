@@ -1,15 +1,23 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 
-.main {
+.main__section {
   width: 100%;
   display: flex;
+  max-width: 1440px;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .main__body {
   width: 100%;
+  padding: 0.25rem;
   display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
   flex-direction: column;
 
   @include desktop {
@@ -21,15 +29,19 @@
   }
 
   &__comments {
-    display: block;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
   }
 
   &__list {
+    margin: 1.5rem 0;
     display: flex;
-    margin: 1rem 0.5rem;
     flex-direction: column;
 
-    @include tablet {
+    @include desktop {
       margin-left: 0.25rem;
       justify-content: center;
     }

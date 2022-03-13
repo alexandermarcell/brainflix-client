@@ -1,19 +1,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .navbar {
-  display: block;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0 16px;
-
-  @include tablet {
-    margin: 0 36px;
-  }
-
-  @include desktop {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1440px;
-  }
 
   &__wrap {
     display: block;
