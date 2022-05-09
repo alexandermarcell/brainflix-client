@@ -2,7 +2,7 @@
 
 .video {
   width: 100%;
-  display: block;
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -39,8 +39,8 @@
   }
 
   &__poster {
-    width: 200px;
-    height: 150px;
+    width: 175px;
+    height: 100px;
     margin: 0.5rem 0;
     border-radius: 4px;
     background-color: $brainflix-mercury;

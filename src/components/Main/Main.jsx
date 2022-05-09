@@ -6,36 +6,26 @@ import VideoList from '../VideoList/VideoList';
 import CommentForm from '../CommentForm/CommentForm';
 import CurrentVideo from '../CurrentVideo/CurrentVideo';
 
-function Main({ videoDetails, currentVideo, comments }) {
+function Main(props) {
+    const { videoDetails, currentVideo, comments } = props;
     return (
-        <div className="main__section">
-            <div className="main__nav">
-                <Navbar />
-            </div>
-            <Hero
-            currentVideo={currentVideo}
-            />
-            <div className="main__body">
-                <div className="main__body__comments">
-
-                    <CurrentVideo
-                    currentVideo={currentVideo}
-                    />
-
-                    <CommentForm />
-
-                    <Comments
-                    comments={comments}
-                    />
-
+        <div className="main">
+            <section className="main__wrap">
+                <div className="main__nav"> <Navbar /> </div>
+                <Hero currentVideo={currentVideo} />
+                <div className="main__body">
+                    <div className="main__body-container">
+                        <div className="main__comments">
+                            <CurrentVideo currentVideo={currentVideo} comments={comments} />
+                            <CommentForm currentVideo={currentVideo} />
+                            <Comments comments={comments} />
+                        </div>
+                        <div className="main__list">
+                            <VideoList videoDetails={videoDetails} currentVideo={currentVideo} /> 
+                        </div> 
+                    </div>
                 </div>
-                <div className="main__body__list">
-                    <VideoList
-                    videoDetails={videoDetails}
-                    currentVideo={currentVideo}
-                    />
-                </div> 
-            </div>
+            </section>
         </div>
     );
 }

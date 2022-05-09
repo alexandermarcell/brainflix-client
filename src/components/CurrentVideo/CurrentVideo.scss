@@ -10,7 +10,7 @@
     width: 100%;
   }
 
-  &__name {
+  &__title {
     display: block;
     width: 100%;
     justify-content: flex-start;
@@ -22,88 +22,95 @@
       @include tablet-page-header;
     }
   }
-}
-.details {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  justify-content: space-between;
-  border-bottom: 1px solid $brainflix-mercury;
-}
-.detail__header {
-  width: 100%;
-  display: block;
-  padding: 0.5rem 0;
-  align-items: center;
-  @include mobile-body-copy();
 
-  @include tablet {
+  &__details {
+    width: 100%;
     display: flex;
-    @include tablet-body-copy();
-  }
-}
-
-.detail__channel {
-  padding: 0.5rem 0;
-  color: $brainflix-black;
-  @include mobile-subheader();
-
-  @include tablet {
-    margin-right: 3rem;
-  }
-}
-
-.detail__timestamp {
-  padding: 0.5rem 0;
-  color: $brainflix-silver;
-  @include mobile-body-copy();
-}
-
-.detail__container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include tablet {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-bottom: 1px solid $brainflix-mercury;
   }
-}
 
-.detail__views {
-  padding: 0.5rem 0;
-  color: $brainflix-silver;
-  @include mobile-body-copy();
+  &__sub-container {
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+    align-items: center;
+    @include mobile-body-copy();
 
-  @include tablet {
-    margin-right: 2rem;
+    @include tablet {
+      display: flex;
+      @include tablet-body-copy();
+    }
   }
-}
 
-.detail__likes {
-  padding: 0.5rem 0;
-  margin-right: 1rem;
-  color: $brainflix-silver;
-  @include mobile-body-copy();
-}
+  &__channel {
+    padding: 0.5rem 0;
+    color: $brainflix-black;
+    @include mobile-subheader();
 
-.detail__description {
-  width: 100%;
-  font-size: 16px;
-  padding: 1.5rem 0;
-  @include mobile-body-copy();
-
-  @include tablet {
-    @include tablet-body-copy();
+    @include tablet {
+      margin-right: 3rem;
+    }
   }
-}
 
-.icon-body {
-  align-items: center;
-  align-content: center;
-  padding: 0 0.75rem;
+  &__timestamp {
+    padding: 0.5rem 0;
+    color: $brainflix-silver;
+    @include mobile-body-copy();
+  }
+
+  &__main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__views {
+    padding: 0.5rem 0;
+    color: $brainflix-silver;
+    @include mobile-body-copy();
+
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
+
+  &__icon-body {
+    align-items: center;
+    align-content: center;
+    padding: 0 0.75rem;
+  }
+
+  &__likes {
+    padding: 0.5rem 0;
+    margin-right: 1rem;
+    color: $brainflix-silver;
+    @include mobile-body-copy();
+  }
+
+  &__description {
+    width: 100%;
+    font-size: 16px;
+    padding: 1.5rem 0;
+    @include mobile-body-copy();
+
+    @include tablet {
+      @include tablet-body-copy();
+    }
+  }
+
+  &__comment-counter{
+    font-size: 12px;
+    font-weight: 600;
+  }
 }

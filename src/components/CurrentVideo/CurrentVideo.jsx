@@ -2,48 +2,51 @@ import './CurrentVideo.scss';
 import Likes from '../../Assets/Icons/likes.svg';
 import Views from '../../Assets/Icons/views.svg';
 
-function CurrentVideo({currentVideo}){
+function CurrentVideo({currentVideo, comments}){
     return (
         <section className='currentVideo'>
-            <div className="currentVideo__wrap">
-                 <h1 className='currentVideo__name'>
+            <section className="currentVideo__wrap">
+                <h1 className='currentVideo__title'>
                     {currentVideo.title}
                 </h1>
 
                 {/* current video details section */}
 
-                <div className="details">
-                    <div className="detail__header">
-                        <h2 className="detail__channel">
+                <div className="currentVideo__details">
+                    <div className="currentVideo__sub-container">
+                        <h2 className="currentVideo__channel">
                             By {currentVideo.channel}
                         </h2>
-                        <p className="detail__timestamp">
+                        <p className="currentVideo__timestamp">
                             {new Date(currentVideo.timestamp).toLocaleDateString()}
                         </p>
                     </div>
-                    <div className="detail__container">
-                        <p className="detail__views">
+                    <div className="currentVideo__main-container">
+                        <p className="currentVideo__views">
                             <img
-                            className='icon-body'
+                            className='currentVideo__icon-body'
                             src={Views}
                             alt='view icon'
                             /> {currentVideo.views}
                         </p>
-                        <p className="detail__likes">
+                        <p className="currentVideo__likes">
                             <img 
-                            className='icon-body'
+                            className='currentVideo__icon-body'
                             src={Likes}
                             alt='view icon'
                             /> {currentVideo.likes}
                         </p>
                     </div>
                 </div>
-                <div className="detail__description">
+                <div className="currentVideo__description">
                     <p className='video__text'>
                         {currentVideo.description}
                     </p>
                 </div>
-            </div>
+                <p className='currentVideo__comment-counter'>
+                    {comments.length} Comments
+                </p>
+            </section>
         </section>
     )
 }

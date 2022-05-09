@@ -1,41 +1,51 @@
 import './CommentForm.scss';
-import Button from '../Button/Button';
+import axios from 'axios';
 import Avatar from '../Avatar/Avatar';
 import AddComment from '../../Assets/Icons/add_comment.svg'
 
-function CommentForm(){
-    return(
-        <div className="commentForm">
-            <div className="commentForm__avatar">
-                <Avatar/>
-            </div>
-            <div className="comment-form">
-                <form
-                className='comment-form__wrap'
-                action="/"
-                >
-                    <label 
-                    className='comment-form__label' 
-                    htmlFor="/"
-                    >
-                        Join The Conversation
-                    </label>
+function CommentForm({ currentVideo }){
 
-                    <textarea 
-                    name="comment" 
-                    className='comment-form__textarea'
-                    id="form-textarea" 
-                    placeholder='Add a new comment' 
-                    cols="30" rows="10"
-                    >   
-                    </textarea>
+    const id = currentVideo.id;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(!e.target.comment.value){
+            return;
+        }
+
+        axios
+        .post(`http://localhost:5500/api/v1/videos/${id}/comments`, {
+            comment: e.target.comment.value,
+            id,
+        })
+        .then(response => {
+            console.log(response);
+            window.reload();
+        })
+        .catch((error) => {
+            console.log("There's an error: ", error);
+        })
+    }
+
+
+    return(
+        <div className="form">
+            <div className="form__avatar"><Avatar/></div>
+            <div className="form__wrap">
+                <form className='form__container' onSubmit={handleSubmit} >
+                    <div className="form__body">
+                        <label className='form__label'> Join The Conversation </label>
+                        <textarea name="comment" className='form__textarea'
+                        id="form-textarea" placeholder='Add a new comment' 
+                        cols="30" rows="10" ></textarea>
+                    </div>
+                    <button type='submit' className="form__button">
+                        <img className='form__button-image' src={AddComment} alt="btn" />
+                        Comment
+                    </button>
                 </form>
-                <div className="comment-form__button">
-                    <Button
-                    image={AddComment}
-                    text='comment' 
-                    />
-                </div>
+                
             </div>
         </div>
     )

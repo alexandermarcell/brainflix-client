@@ -6,7 +6,7 @@ function Button({ image, text }) {
     className='btn'
     >
       <img
-      className='btn-image'
+      className='form__button-image'
       src={image}
       alt="btn"
       />

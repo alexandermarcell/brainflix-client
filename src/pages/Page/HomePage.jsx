@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 import axios from 'axios';
 import Main from '../../components/Main/Main';
 
 const Url = "http://localhost:5500/api/v1/videos/";
 
+
 class HomePage extends React.Component{
     state = {
         videoDetails: [],
-        currentVideo: {},
+        currentVideo: [],
         comments: []
       }
 
     componentDidMount() {
       axios
         .get( Url )
-        .then(response =>{ 
-          console.log(response.data);
+        .then(response =>{
           this.setState({ videoDetails: response.data })
           const videoId = this.props.match.params.id || response.data[0].id;
           this.getVideoById(videoId);
@@ -53,11 +53,8 @@ class HomePage extends React.Component{
       if (this.state.currentVideo === null) return <h2>Video Loading ...</h2>
         return(
             <>
-                <Main
-                videoDetails={this.state.videoDetails}
-                comments={this.state.comments}
-                currentVideo={this.state.currentVideo}
-                />
+                <Main videoDetails={this.state.videoDetails} comments={this.state.comments}
+                currentVideo={this.state.currentVideo} />
             </>
         )
     }

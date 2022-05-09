@@ -32,6 +32,7 @@
   &__box {
     width: 100%;
     display: flex;
+    position: relative;
     margin-left: 0.5rem;
     flex-direction: column;
     box-sizing: border-box;
@@ -69,5 +70,17 @@
     @include tablet {
       @include tablet-body-copy();
     }
+  }
+
+  &__deletebutton {
+    width: 20px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: -0.25rem;
+    right: -0.5rem;
+  }
+
+  &__deletebutton:active{
+    transform: translateY(2px);
   }
 }
