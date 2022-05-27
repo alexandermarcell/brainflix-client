@@ -20,10 +20,12 @@
     object-fit: cover;
 
     @include tablet {
+      width: 100%;
       max-width: 720px;
     }
 
     @include desktop {
+      width: 100%;
       max-width: 1080px;
     }
   }
