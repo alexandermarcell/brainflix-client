@@ -5,24 +5,25 @@ function Comments({comments, currentVideo}) {
 
     const currVidId = currentVideo.id;
 
-    const handleDelete = (e, comment) => {
-        e.preventDefault();
+    // const handleDelete = (e, comment) => {
+    //     e.preventDefault();
 
-        const id = comment.id;
+    //     const id = comment.id;
 
-        console.log(id)
+    //     console.log(id)
 
-        axios
-        .delete(`https://alex-brainflix-server.herokuapp.com/api/v1/videos/${currVidId}/comments/${id}`, {
-            id
-        })
-        .then((res) => {
-            console.log(res)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-    }
+    //     axios
+    //     .delete(`https://alex-brainflix-server.herokuapp.com/api/v1/videos/${currVidId}/comments/${id}`, {
+    //         id
+    //     })
+    //     .then((res) => {
+    //         console.log(res)
+    //     })
+    //     .catch((error) => {
+    //         console.log(error)
+    //     })
+    // }
+    
     return(
         <section className="comments">    
             {comments.map((comment) => {
@@ -35,10 +36,10 @@ function Comments({comments, currentVideo}) {
                                 <p className="comments__date"> {new Date(comment.timestamp).toLocaleDateString()} </p>
                             </div>
                             <p className="comments__comment"> {comment.comment} </p>
-                            {
+                            {/* {
                                 comment.id && <p className='comments__deletebutton' 
                                 onClick={(e) => handleDelete(e, comment)} > X </p>
-                            }
+                            } */}
                         </div>
                    </article>
                 )
