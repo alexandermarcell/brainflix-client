@@ -1,7 +1,6 @@
 import './Search.scss';
 import Mohan from '../../Assets/Images/Mohan-muruge.jpg';
 
-
 const Search = () => {
     return (
         <div className='search'>

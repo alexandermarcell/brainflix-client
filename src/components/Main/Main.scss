@@ -5,10 +5,12 @@
   width: 100%;
   display: flex;
   margin: 0 auto;
+  padding: 0.2rem;
   max-width: 1500px;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
 
@@ -55,21 +57,24 @@
   }
 
   &__comments {
-    width: 65%;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     align-content: center;
     flex-direction: column;
+
+    @include desktop{
+      width: 65%;
+    }
   }
 
   &__list {
-    width: 35%;
     display: flex;
     margin: 1.5rem 0;
     flex-direction: column;
 
     @include desktop {
+      width: 35%;
       margin-left: 0.25rem;
       justify-content: center;
     }

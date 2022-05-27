@@ -18,7 +18,7 @@ function Main(props) {
                         <div className="main__comments">
                             <CurrentVideo currentVideo={currentVideo} comments={comments} />
                             <CommentForm currentVideo={currentVideo} />
-                            <Comments comments={comments} />
+                            <Comments comments={comments} currentVideo={currentVideo} />
                         </div>
                         <div className="main__list">
                             <VideoList videoDetails={videoDetails} currentVideo={currentVideo} /> 

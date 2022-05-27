@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Main from '../../components/Main/Main';
 
-const Url = "http://localhost:5500/api/v1/videos/";
+const Url = "https://alex-brainflix-server.herokuapp.com/api/v1/videos/";
 
 
 class HomePage extends React.Component{
@@ -53,7 +53,8 @@ class HomePage extends React.Component{
       if (this.state.currentVideo === null) return <h2>Video Loading ...</h2>
         return(
             <>
-                <Main videoDetails={this.state.videoDetails} comments={this.state.comments}
+                <Main videoDetails={this.state.videoDetails} 
+                comments={this.state.comments}
                 currentVideo={this.state.currentVideo} />
             </>
         )

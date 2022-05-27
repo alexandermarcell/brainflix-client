@@ -15,13 +15,13 @@ function CommentForm({ currentVideo }){
         }
 
         axios
-        .post(`http://localhost:5500/api/v1/videos/${id}/comments`, {
+        .post(`https://alex-brainflix-server.herokuapp.com/api/v1/videos/${id}/comments`, {
             comment: e.target.comment.value,
             id,
         })
         .then(response => {
             console.log(response);
-            window.reload();
+            window.location.reload();
         })
         .catch((error) => {
             console.log("There's an error: ", error);
