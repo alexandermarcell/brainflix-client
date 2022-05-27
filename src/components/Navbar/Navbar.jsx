@@ -10,15 +10,12 @@ function Navbar() {
     return (
         <div className="navbar">
             <div className="navbar__wrap">
-                <Link className='navbar__logo' to="/" ><Logo /></Link>
+                <Link className='navbar__logo' to="/" >
+                    <Logo />
+                </Link>
                 <Search />
-                <Link 
-                to="/upload"
-                className='navbar__button'>
-                    <Button
-                    text='upload'
-                    image={upLoad}
-                    />
+                <Link to="/upload" className='navbar__button'>
+                    <Button text='upload' image={upLoad} />
                 </Link>
                 <img 
                 src={Mohan}

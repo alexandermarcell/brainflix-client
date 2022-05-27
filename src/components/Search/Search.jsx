@@ -6,14 +6,14 @@ const Search = () => {
         <div className='search'>
             <form className="search__form" method="get">
                 <input
-                    type="text"
+                    type="search"
                     className="search__input"
                     placeholder="Search"
                 />
             </form>
             <img 
             src={Mohan}
-            className='searchAvatar'
+            className='search__Avatar'
             alt='Search line avatar' 
             />
         </div>
